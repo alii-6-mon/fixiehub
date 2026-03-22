@@ -1,0 +1,260 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #ce8f08;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HERE */
+header {
+  background: #111;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+}
+
+.links li {
+  margin: 0 15px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.links a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: lime;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  position: relative; 
+  background: url('mrbg.gif') center/cover no-repeat;
+  padding: 400px 0;
+  text-align: center;
+  color: white; 
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 1;
+}
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 2; 
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: rgb(246, 248, 115);
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: gray;
+}
+
+.wishlist.active {
+  color: red;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+/* Search bar style */
+.search-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  padding: 10px 15px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Wishlist heart */
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: #ff4b5c;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.wishlist:hover {
+  transform: scale(1.2);
+}
+
+/* Section Title */
+#accessories h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: rgb(0,0,0,); /* same style as products */
+}
+
+/* Grid layout same as bikes */
+#accessories .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Card styling */
+#accessories .card {
+  position: relative;
+  background: lab(92.93% -13.81 79.71);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: black;
+}
+
+#accessories .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgb(0,0,0);
+}
+
+/* Images */
+#accessories .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Product Title */
+#accessories .card h3 {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+/* Product Description */
+#accessories .card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+/* Price */
+#accessories .card span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: black;
+}
+
+/* Buttons */
+#accessories .card button {
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: hsl(0, 100%, 50%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  transition: background 0.2s;
+}
+
+#accessories .card button:hover {
+  background-color: #00bfa0;
+}
+
+/* Wishlist heart */
+#accessories .wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  color: #ff4b5c;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#accessories .wishlist:hover {
+  transform: scale(1.2);
+}
